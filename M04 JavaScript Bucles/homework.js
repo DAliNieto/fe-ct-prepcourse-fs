@@ -226,6 +226,10 @@ function esPrimo(num) {
 var primo=0;
 var cont=0;
 
+if (num<0||num===0||num===1){
+   return false;
+}
+
    for (let i=1; i<=num; i++){
    primo = num % i;
    if (primo === 0){
