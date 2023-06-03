@@ -4,55 +4,74 @@ function devolverPrimerElemento(array) {
    // Retornar el primer elemento del arreglo recibido por parámetro.
    // Tu código:
    let firstelement;
-   for (let i=0;i<=array.length;i++){
+   for (let i=0;i<array.length;i++){
       firstelement = array[0];
       
    }
-   return console.log(firstelement);
+   return firstelement;
 }
 
-devolverPrimerElemento([5,2,3,4]);
+//devolverPrimerElemento([5,2,3,4]);
 
 function devolverUltimoElemento(array) {
    // Retornar el último elemento del arreglo recibido por parámetro.
    // Tu código:
 
-   let lastelement;
-   for (let i=0;i<=array.length;i++){
-      if (i==array.length){
+   let lastelement; 
+   //console.log('el array tiene '+array.length);
+   for (let i=0;i<array.length;i++){
+       //console.log('el dato en la posicion '+ i + 'es' + array[i]);
+       if (i==array.length-1){
          lastelement = array[i];
+        // console.log(lastelement);
       }
       
-      
+      //console.log('array '+ i + 'valor'+ array[i]);
    }
-   return console.log(lastelement);
+   return lastelement;
 
 
 }
 
-devolverUltimoElemento([5,2,3,4]);
+//devolverUltimoElemento([5,2,3,4]);
 
 function obtenerLargoDelArray(array) {
    // Retornar la longitud del arreglo recibido por parámetro.
    // Tu código:
+   return array.length;
 }
 
 function incrementarPorUno(array) {
    // El arreglo recibido por parámetro contiene números.
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
+   var nuevoarray = new Array ();
+   for (i=0;i<=array.length-1;i++){
+      nuevoarray[i]=array[i]+1;
+    //  console.log('El nuevo arreglo es: ['+ nuevoarray[i] + ']');
+       
+   }
+
+return nuevoarray;
+
 }
 
 function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
+
+   array[array.length] = elemento;
+   return array;
 }
 
 function agregarItemAlComienzoDelArray(array, elemento) {
    // Agrega el "elemento" al comienzo del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
+   array.unshift = elemento;
+   
+   return array;
 }
 
 function dePalabrasAFrase(palabras) {
